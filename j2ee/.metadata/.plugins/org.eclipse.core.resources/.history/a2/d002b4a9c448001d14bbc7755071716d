@@ -1,0 +1,5 @@
+<form action="SearchServiceProvider.jsp">
+Enter Name<input type="text" name="name" />
+
+<input type="submit" value="Search"/> 
+</form>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="AddService.jsp">
+NAME<input type="text" name="name"/><br><br>
+EMAIL<input type="email" name="email"/><br><br>
+PASSWORD<input type="password" name="pwd"/><br><br>
+SERVICE<select name="sertype">
+<option>Electician</option>
+<option>Plumber</option>
+<option>Cook</option>
+<option>Painter</option>
+<option>Carpenter</option>
+<option>Mechanic</option>
+</select> <br><br>
+
+MOBILE<input type="number" name="mobile"/><br><br>
+
+AREA<select name="area">
+<option>Vijay Nagar</option>
+<option>L.I.G</option>
+<option>Geeta Bhawan</option>
+<option>Bangali</option>
+<option>Mari Mata</option>
+<option>Rajendra Nagar</option>
+</select><br><br>
+
+CHARGES<input type="number" name="charges"/><br><br><br>
+<input type="submit" value="Add Profile"/>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h1>First JSP Page</h1>
+<form action="Add.jsp">
+ID<input type="text" name="id"/><br>
+Password<input type="text" name="pwd"/><br>
+<input type="submit">
+</form>

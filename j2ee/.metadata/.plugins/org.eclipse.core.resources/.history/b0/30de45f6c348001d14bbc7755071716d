@@ -1,0 +1,54 @@
+<%@page errorPage="error.jsp" %>
+<%@include file="Db.jsp"%>
+
+<%
+String qr="select * from user";
+Statement st=con.createStatement();
+ResultSet rs=st.executeQuery(qr);
+if(rs.next())
+{
+%>
+<table align="center" border="1px">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+   
+    <th>Gender</th>
+    <th>Mobile</th>
+    <th>Address</th>
+   
+  
+  </tr>
+  <%
+  do{
+	  String name=rs.getString("name");
+	  String email=rs.getString("email");
+	  
+	  String gender=rs.getString("gender");
+	  String mobile=rs.getString("mobile");
+	  String address=rs.getString("address");
+	  
+	  %>
+	  <tr>
+	  <td><%= name %></td>
+	    <td><%= email %></td>
+	      <td><%= gender %></td>
+	          <td><%= mobile %></td>
+	           <td><%= address %></td>
+	            
+	              <td><a href="DeleteUser.jsp?email=<%= email%>">DELETE</a></td>
+	       
+	              </tr>
+	    <% 
+  }while(rs.next());
+  
+	  %>
+</table>
+<%
+}
+else{
+	out.println("no provider found");
+}
+
+con.close();
+%>

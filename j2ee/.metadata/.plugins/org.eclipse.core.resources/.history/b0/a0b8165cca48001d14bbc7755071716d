@@ -1,0 +1,56 @@
+<%@include file="Db.jsp"%>
+<%@page errorPage="error.jsp"%>
+<%
+String email=(String)session.getAttribute("Uid");
+out.println(email);
+String qr="select s.name,s.email,sertype,charges,datetime,bookstatus from serviceprovider s,user u,bookingprovider where providerEmail=s.email and userEmail=u.email and u.email=? ";
+PreparedStatement ps=con.prepareStatement(qr);
+ps.setString(1,email);
+ResultSet rs=ps.executeQuery();
+if(rs.next()){
+	%>
+	<table align="center" border="1px">
+	<tr>
+	<th>Service provider name</th>
+	<th>service_type</th>
+	<th>charges </th>
+	<th>Date and time of booking</th>
+	<th>Booking status</th>
+	
+	</tr>
+	<%
+	
+do{
+	String name=rs.getString("name");
+	String sertype=rs.getString("sertype");
+	String providerEmail=rs.getString("email");
+	String charges=rs.getString("charges");
+	String datetime=rs.getString("datetime");
+	String bookstatus=rs.getString("bookstatus");
+	%>
+	<tr>
+	<td><%=name %></td>
+	<td><%=sertype %></td>
+	<td><%=charges %></td>
+	<td><%=datetime %></td>
+	<td><%=bookstatus%></td>
+	
+	<% if(!(bookstatus.equals("completed")||bookstatus.equals("Accept"))){ %>
+	
+<td><a href="DeleteRequest.jsp?uemail=<%=email %>&providerEmail=<%=providerEmail %>&datetime=<%=datetime %>">Delete</a></td>
+<%} %>
+	<td><a href="completeRequest.jsp?uemail=<%=email %>&providerEmail=<%=providerEmail %>&datetime=<%=datetime %>">Completed</a></td>
+	</tr>
+	<% 
+}while(rs.next());
+	%>
+	</table>
+	<%
+	
+}
+else{
+	out.println("no provider  found");
+	
+}
+con.close();
+%>

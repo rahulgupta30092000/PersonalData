@@ -1,0 +1,35 @@
+<h1>Welcome to Home</h1>
+<%
+String email=(String)session.getAttribute("Uid");
+%>
+Welcome <%=email%>
+<form action="SearchProvider.jsp">
+Service<select name="sertype">
+<option>Electician</option>
+<option>Plumber</option>
+<option>Cook</option>
+<option>Painter</option>
+<option>Carpenter</option>
+<option>Mechanic</option>
+</select>
+Area<select name="area">
+<option>Vijay Nagar</option>
+<option>L.I.G</option>
+<option>Geeta Bhawan</option>
+<option>Bangali</option>
+<option>Mari Mata</option>
+<option>Rajendra Nagar</option>
+</select>
+<br>
+<input type="submit" value="Search"/> 
+</form>
+
+<a href="ViewBookingsUser.jsp">view my all bookings</a>
+
+<%
+out.println("<a href=LogoutForUser>Logout</a><br>");
+
+%>
+
+<br>
+<a href="AllRejectedRequestsbyProvider.jsp">View All Rejected Requests</a>

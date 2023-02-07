@@ -1,0 +1,56 @@
+<%@include file="Db.jsp"%>
+<%@page errorPage="error.jsp" %>
+
+<%
+String sertype=request.getParameter("sertype");
+String area=request.getParameter("area");
+
+
+String qr="select * from serviceprovider where sertype=? and area=? and Status='yes'";
+PreparedStatement ps=con.prepareStatement(qr);
+ps.setString(1,sertype);
+ps.setString(2, area);
+ResultSet rs=ps.executeQuery();
+if(rs.next())
+{
+	%>	
+<table align="center" border="1px">
+<tr>
+<th>Name</th>
+<th>Service_type</th>
+<th>Charges</th>
+<th>Area</th>
+<th>Date&Time</th>
+</tr>
+
+<%
+
+do{
+	String name=rs.getString("name");
+	String providerEmail=rs.getString("email");
+
+	String charges=rs.getString("charges");
+	String mobile=rs.getString("mobile");
+	%>
+	<tr>
+	<form action="BookProvider.jsp">
+	<td><%=name %><input type="hidden" name="providerEmail" value="<%=providerEmail %>"/></td>
+	<td><%=sertype %></td>
+	<td><%=charges %></td>
+	<td><%=area %></td>
+	<td><input type="datetime-local" name="dt" required></td>
+	<td><input type="submit" value="Book Now"/></td>
+	
+	</form>
+</tr>
+<% 
+}while(rs.next());
+%>
+</table>
+<% 
+}
+else{
+	out.println("no provider found");
+}
+con.close();
+%>

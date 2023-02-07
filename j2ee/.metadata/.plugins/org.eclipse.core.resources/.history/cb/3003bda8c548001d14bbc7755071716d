@@ -1,0 +1,12 @@
+<%
+String email=(String) session.getAttribute("id");
+%>
+welcome <%=email %>
+
+
+<a href="LogoutForProvider">Logout</a><br>
+<a href="EditServiceproviderProfile.jsp">Edit Profile</a><br>
+<a href="ViewAllRequests.jsp">View All Pending Requests</a><br>
+<a href="ViewAllCompleteRequests.jsp">View All Complete Requests</a><br>
+<a href="ViewAllAcceptRequests.jsp">View All Accept Requests</a><br>
+<a href="AllRejectedRequests.jsp">View All Rejected Requests</a>

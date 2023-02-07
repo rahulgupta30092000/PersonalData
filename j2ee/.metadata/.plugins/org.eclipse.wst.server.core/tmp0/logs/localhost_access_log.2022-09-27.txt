@@ -1,0 +1,13 @@
+127.0.0.1 - - [27/Sep/2022:15:44:06 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:44:12 +0530] "GET /ServiceProvider/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:44:12 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:44:15 +0530] "GET /ServiceProvider/serviceprovider.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:44:26 +0530] "GET /ServiceProvider/ServiceProviderLogin.jsp?email=suresh%40gamil.com&pwd=1234 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:44:27 +0530] "GET /ServiceProvider/ServiceProHome.jsp HTTP/1.1" 200 129
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:44:29 +0530] "GET /ServiceProvider/LogoutForProvider HTTP/1.1" 200 363
+127.0.0.1 - - [27/Sep/2022:15:47:12 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:47:16 +0530] "GET /ServiceProvider/ForUser.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:47:22 +0530] "GET /ServiceProvider/UserLogin.jsp?email=kratik%40gmail.com&password=1234 HTTP/1.1" 500 351
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:47:28 +0530] "GET /ServiceProvider/UserLogin.jsp?email=kratik%40gmail.com&password=12345 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:47:28 +0530] "GET /ServiceProvider/UserHome.jsp HTTP/1.1" 200 663
+0:0:0:0:0:0:0:1 - - [27/Sep/2022:15:47:30 +0530] "GET /ServiceProvider/LogoutForUser HTTP/1.1" 200 405

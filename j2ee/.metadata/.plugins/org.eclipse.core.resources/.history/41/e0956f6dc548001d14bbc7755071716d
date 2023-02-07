@@ -1,0 +1,59 @@
+<%@include file="Db.jsp"%>
+<%@page errorPage="error.jsp" %>
+
+<%
+String name=request.getParameter("name");
+
+
+
+String qr="select * from user where name=?";
+PreparedStatement ps=con.prepareStatement(qr);
+ps.setString(1,name);
+
+ResultSet rs=ps.executeQuery();
+if(rs.next())
+{
+	%>	
+<table align="center" border="1px">
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Gender</th>
+
+<th>Mobile</th>
+<th>Address</th>
+</tr>
+
+<%
+
+do{
+	String namee=rs.getString("name");
+	String Email=rs.getString("email");
+	String gender=rs.getString("gender");
+	
+	String mobile=rs.getString("mobile");
+	
+	String address=rs.getString("Address");
+	%>
+	<tr>
+	
+	<td><%=namee %></td>
+	<td><%=Email %></td>
+	<td><%=gender %></td>
+	<td><%=mobile %></td>
+	<td><%=address %></td>
+
+	
+	
+</tr>
+<% 
+}while(rs.next());
+%>
+</table>
+<% 
+}
+else{
+	out.println("no provider found");
+}
+con.close();
+%>

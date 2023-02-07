@@ -1,0 +1,71 @@
+<%@include file="Db.jsp"%>
+<%@page errorPage="error.jsp"%>
+<%
+
+String email=(String)session.getAttribute("Uid");
+
+out.println(email);
+String qr="select s.name as sName, s.sertype as SType, s.email as SEmail, providerEmail, bookStatus,u.address as userAddress ,dateTime, u.name as UName from serviceprovider s,user u, bookingprovider b where s.email=providerEmail and bookStatus='Reject' and  u.email=?";
+PreparedStatement ps=con.prepareStatement(qr);
+ps.setString(1,email);
+
+ResultSet rs=ps.executeQuery();
+if(rs.next())
+{
+	%>
+	<table align="center" border="1px">
+  <tr>
+   <th>Provider Name</th>
+    <th>Service Type</th>
+     <th>User Name</th>
+    <th>User Name</th>
+    <th>User Address</th>
+    <th>Date and Time of booking</th>
+    <th>Booking status</th>
+  </tr>
+  
+  <%
+ do
+ {
+
+	 String ProName=rs.getString("sName");
+	 String serviceType=rs.getString("SType");
+	 String semail=rs.getString("SEmail");
+	 String name=rs.getString("UName");
+	 
+	 String datetime=rs.getString("dateTime");
+	 String address=rs.getString("userAddress");
+ 	String status=rs.getString("bookStatus");
+ 	
+ 	out.println();
+ 	
+ %>
+ 	<tr>
+ 	<form >
+ 	<td><%=ProName %></td>
+ 	<td><%=serviceType %></td>
+ 	 	<td><%=semail %></td>
+ 	<td><%=name %></td>
+ 		<td><%=address %></td>
+ 	<td><%=datetime %><input type="hidden" name="datetime" value=<%=datetime %>/>
+ 	<input type="hidden" name="pemail" value="<%=email %>"/>
+ 	<input type="hidden" name="uemail" value="<%=semail %>"/>
+ 	</td>
+ 	
+ 	<td><%=status %></td>
+		</form>
+		</tr>
+ 	<% 
+ }while(rs.next());
+ %>
+  </table>
+<%
+
+}
+else
+{
+	out.println("not found");
+		
+}
+con.close();
+ %>

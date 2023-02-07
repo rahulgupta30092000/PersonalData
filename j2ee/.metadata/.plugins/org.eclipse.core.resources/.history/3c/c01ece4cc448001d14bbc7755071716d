@@ -1,0 +1,69 @@
+<%@include file="Db.jsp"%>
+<%@page errorPage="error.jsp" %>
+
+
+
+<%
+String name=request.getParameter("name");
+
+
+
+String qr="select * from serviceprovider where name=?";
+PreparedStatement ps=con.prepareStatement(qr);
+ps.setString(1,name);
+
+ResultSet rs=ps.executeQuery();
+if(rs.next())
+{
+	%>	
+<table align="center" border="1px">
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Service_type</th>
+<th>Charges</th>
+<th>Area</th>
+<th>Mobile</th>
+<th>Status</th>
+</tr>
+
+<%
+
+do{
+	String namee=rs.getString("name");
+	String Email=rs.getString("email");
+	String sertype=rs.getString("sertype");
+	String charges=rs.getString("charges");
+	String mobile=rs.getString("mobile");
+	String Area=rs.getString("area");
+	String status=rs.getString("status");
+	%>
+	<tr>
+	
+	<td><%=namee %></td>
+	<td><%=Email %></td>
+	<td><%=sertype %></td>
+	<td><%=charges %></td>
+	<td><%=Area %></td>
+	<td><%=mobile %></td>
+	
+	<td><%=status %></td>
+	
+	
+	
+</tr>
+<% 
+}while(rs.next());
+%>
+</table>
+<% 
+
+}
+
+else{
+	
+	
+	response.sendRedirect("SearchforServiceProvider.html");
+}
+con.close();
+%>

@@ -1,0 +1,45 @@
+<%@include file="Db.jsp"%>
+<%@page errorPage="error.jsp"%>
+<%
+
+String email=(String )session.getAttribute("id");
+String qr="select u.name as uname,u.email as uemail,u.address as userAddress ,datetime,bookstatus from serviceprovider s,user u,bookingprovider where providerEmail=s.email and userEmail=u.email and bookstatus='completed' and s.email=?";
+PreparedStatement ps=con.prepareStatement(qr);
+ps.setString(1, email);
+ResultSet rs=ps.executeQuery();
+if(rs.next()){
+	%>
+	<table align="center" border="1px">
+	<tr>
+	<th>User Name</th>
+	<th>Date and Time of Booking</th>
+	<th>user address</th>
+	<th>Booking status</th>
+	</tr>
+	
+	<% 
+	do{
+		String name=rs.getString("uname");
+		String userEmail=rs.getString("uEmail");
+		String dateTime=rs.getString("dateTime");
+		String address=rs.getString("userAddress");
+		String bookstatus=rs.getString("bookStatus");
+		%>
+		<tr>
+		<td><%=name %></td>
+		<td><%=dateTime %></td>
+		<td><%=address %></td>
+		<td><%=bookstatus %></td>
+	
+		</tr>
+		<% 
+	}while(rs.next());
+	%>
+	</table>
+	<% 
+}
+else{
+	out.println("no complete tasks found");
+}
+con.close();
+%> 

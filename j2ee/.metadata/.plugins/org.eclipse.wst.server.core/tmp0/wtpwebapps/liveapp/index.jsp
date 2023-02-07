@@ -1,0 +1,7 @@
+<h1>First JSP Page</h1>
+<form action="Add.jsp">
+ID<input type="text" name="id"/><br>
+Name<input type="text" name="name"/><br>
+<input type="submit">
+</form>
+<a href="Show.jsp">show all</a>

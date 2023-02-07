@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="jquery.js">
+</script>
+<script type="text/javascript" src="jquery-ui.min.js">
+</script>
+<script type="text/javascript" src="tt_slideshow.js">
+</script>
+<script type="text/javascript" src="bootstrap.min.js">
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AskAnyService</title>
+<link rel="stylesheet"  href="bootstrap.css" type="text/css" media="screen"/>
+<link rel="stylesheet"  href="style.css" type="text/css" media="screen"/>
+<!--[if lte IE 8]>
+<link rel="stylesheet"  href="menuie.css" type="text/css" media="screen"/>
+<link rel="stylesheet"  href="vmenuie.css" type="text/css" media="screen"/>
+<![endif]-->
+<script type="text/javascript" src="totop.js">
+</script>
+<!--[if IE 7]>
+<style type="text/css" media="screen">
+#ttr_vmenu_items  li.ttr_vmenu_items_parent {margin-left:-16px;font-size:0px;}
+</style>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="html5shiv.js">
+</script>
+<script type="text/javascript" src="respond.min.js">
+</script>
+<![endif]-->
+<style type="text/css">
+<!--
+.style1 {
+	font-family: 'Roboto Slab', 'Arial';
+	font-size: 1.429em;
+	color: rgba(34,34,34,1);
+}
+.style3 {
+	font-family: 'Roboto Slab', 'Arial';
+	font-size: 24px;
+	color: rgba(34,34,34,1);
+	font-weight: bold;
+}
+-->
+</style></head>
+<body class="Home">
+<div id="ttr_page" class="container">
+  <nav id="ttr_menu" class="navbar-default navbar">
+   <div id="ttr_menu_inner_in">
+<div class="menuforeground">
+</div>
+<div class="ttr_menushape1">
+<div class="html_content"><p><span style="font-family:'Roboto Slab','Arial';font-weight:900;font-size:1.701em;color:rgba(53,181,235,1);">AskAnyService</span></p></div>
+</div>
+<div id="navigationmenu">
+<div class="navbar-header">
+<button id="nav-expander" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+<span class="sr-only">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+</button>
+<a href="#" target="_self">
+
+</a>
+</div>
+<div class="menu-center collapse navbar-collapse">
+<ul class="ttr_menu_items nav navbar-nav navbar-right">
+<li class="ttr_menu_items_parent dropdown active"><a href="index.html" class="ttr_menu_items_parent_link_active"><span class="menuchildicon"></span>Home</a>
+<hr class ="horiz_separator"/>
+</li>
+<li class="ttr_menu_items_parent dropdown"><a href="Adminhome.jsp" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Back</a>
+<hr class ="horiz_separator"/>
+</li>
+<li class="ttr_menu_items_parent dropdown"><a href="services.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Services</a>
+<hr class ="horiz_separator"/>
+</li>
+
+<li class="ttr_menu_items_parent dropdown"><a href="contact.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Contact</a>
+<hr class ="horiz_separator"/>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+<div style="text-align:center ;margin-left:auto;margin-right:auto;height:500px">
+
+<%@page errorPage="error.jsp"%>
+<%@include file="Db.jsp" %>
+<%
+String email=(String)session.getAttribute("id");
+out.print(email);
+String qr="select * from serviceprovider where email=?";
+
+PreparedStatement ps=con.prepareStatement(qr);
+ps.setString(1, email);
+ResultSet rs=ps.executeQuery();
+if(rs.next()){
+	String name=rs.getString("name");
+	String sertype=rs.getString("sertype");
+	int charges=rs.getInt("charges");
+	String mobile=rs.getString("mobile");
+	String area=rs.getString("area");
+	String password=rs.getString("password");
+
+%>
+<pre>
+
+<form action="UpdateProvider.jsp" method="post">
+
+<input type="hidden" name="email" value="<%=email%>"/>
+
+Name<input type="text" name="name" value="<%=name %>"/>
+Service Type<input type="text" name="sertype" value="<%=sertype%>"/>
+Charges<input type="number" name="charges" value="<%=charges %>"/>
+Mobile<input type="number" name="mobile" value="<%=mobile%>"/>
+Area<input type="text" name="area" value="<%=area  %>"/>
+Password<input type="password" name="password" value="<%=password%>"/>
+<input type="submit" value="Update profile"/>
+</form>
+</pre>
+
+<%
+}
+else
+{
+	out.println("no provider found");
+
+
+}
+con.close();
+%>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<p style="margin:1.43em 0em 0.36em 0em;text-align:Center;line-height:1.69014084507042;">&nbsp;</p>
+</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+
+</p>
+</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+
+</div>
+<div class="clearfix visible-lg-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Home_html_row2 row">
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_Home_html_column20">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="html_content"><p style="text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:2.571em;color:rgba(255,255,255,1);">1250</span></p><p style="text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:1.429em;color:rgba(255,255,255,1);">DAYS OF WORK</span></p><p style="margin:1.43em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);"></span></p></div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_Home_html_column21">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="html_content"><p style="margin:0.36em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:2.571em;color:rgba(255,255,255,1);">759</span></p><p style="margin:0.36em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:1.429em;color:rgba(255,255,255,1);">TRUSTED USERS</span></p><p style="margin:1.43em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);"></span></p></div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_Home_html_column22">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="html_content"><p style="margin:0.36em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:2.571em;color:rgba(255,255,255,1);">890</span></p><p style="margin:0.36em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:1.429em;color:rgba(255,255,255,1);">FINISHED WORK</span></p><p style="margin:1.43em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);"> </span></p></div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_Home_html_column23">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div class="html_content"><p style="margin:0.36em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:2.571em;color:rgba(255,255,255,1);">359</span></p><p style="margin:0.36em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:1.429em;color:rgba(255,255,255,1);">OUR REWARDS</span></p><p style="margin:1.43em 0em 0.36em 0em;text-align:Center;"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);"> </span></p></div>
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Home_html_row3 row">
+<div class="post_column col-lg-7 col-md-12 col-sm-12 col-xs-12">
+<div class="ttr_Home_html_column30">
+<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+
+<div style="clear:both;"></div>
+</div>
+</div>
+<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Home_html_row4 row">
+<div class="post_column col-lg-5 col-md-12 col-sm-12 col-xs-12"></div>
+<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_Home_html_row5 row">
+  <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+  <div class="clearfix visible-sm-block visible-md-block visible-xs-block">
+</div>
+  <div class="clearfix visible-sm-block visible-md-block visible-xs-block">
+</div>
+  <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+</div>
+</div>
+<div style="clear:both">
+</div>
+</div>
+<footer id="ttr_footer">
+<div class="ttr_footerHome_html_row0 row">
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<div class="ttr_footerHome_html_column00">
+  <div class="html_content"><p style="margin:0.36em 0em 0.36em 2.86em;">&nbsp;</p><p style="margin:0.36em 0em 0.36em 2.86em;"><span style="font-family:'Roboto Slab','Arial';font-weight:700;font-size:1.429em;color:rgba(0,182,240,1);">NAVIGATION</span></p><p style="margin:1.43em 0em 0.36em 2.86em;"><a HREF="Home.html" class="tt_link" target="_self"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Home</span></a></p><p style="margin:0.57em 0em 0.36em 2.86em;"><a HREF="Firm-Profile.html" class="tt_link" target="_self"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Firm Profile&nbsp;&nbsp;</span></a></p><p style="margin:0.57em 0em 0.36em 2.86em;"><a HREF="Services.html" class="tt_link" target="_self"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Services</span></a></p><p style="margin:0.57em 0em 0.36em 2.86em;"><a HREF="Events.html" class="tt_link" target="_self"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Events</span></a></p><p style="margin:0.57em 0em 0.36em 2.86em;"><a HREF="Contact.html" class="tt_link" target="_self"><span style="font-family:'Roboto','Arial';font-weight:300;font-size:1.143em;color:rgba(255,255,255,1);">Contact</span></a></p></div>
+</div>
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
+</div>
+<div class="clearfix visible-xs-block">
+</div>
+<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
+</div>
+</div>
+<div class="ttr_footer_bottom_footer">
+<div class="ttr_footer_bottom_footer_inner">
+<div class="ttr_footershape1">
+<div class="html_content"><p>&nbsp;</p></div>
+</div>
+<div class="ttr_footershape2">
+<div class="html_content"><p>&nbsp;</p></div>
+</div>
+<div id="ttr_copyright">
+<a href="http://www.kixgo.com/">
+Designed by KixGO
+</a><a href="http://www.kixgo.com/">Website Builder
+</a>
+</div>
+<a href="#" class="ttr_footer_facebook" target="_self" >
+</a>
+<a href="#"class="ttr_footer_twitter" target="_self" >
+</a>
+<a href="#"class="ttr_footer_googleplus" target="_self" >
+</a>
+</div>
+</div>
+</footer>
+</div>
+<script type="text/javascript">
+WebFontConfig = {
+google: { families: [ 'Roboto+Slab:700','Roboto+Slab'] }
+};
+(function() {
+var wf = document.createElement('script');
+wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1.0.31/webfont.js';
+wf.type = 'text/javascript';
+wf.async = 'true';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(wf, s);
+})();
+</script>
+</body>
+</html>
