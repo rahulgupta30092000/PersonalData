@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+.container{
+display: flex;
+flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+.contain{
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    border: 2px solid black;
+    width: 100%;
+    height: 100px;
+}
+.one{
+     padding-left: 100px;  
+    height: 100px;
+    width: 100px;
+    
+}
+.two{
+    display: flex;
+    flex-wrap: wrap;
+}
+.one img {
+     /* padding-left: 50px;  */
+    height: 100px;
+    width: 100px;
+
+}
+.two ul li{
+    flex-wrap: wrap;
+    
+    padding-top: 20px;
+    padding-left: 50px; 
+    float: left;
+    list-style: none;
+    
+}
+.two ul li a{
+    color: white;
+    text-decoration: none;
+}
+.two ul li a:hover{
+    padding: 8px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+    .div0{
+        display: flex; 
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+    }
+    .div1{
+         padding: auto;
+        width: 15%;
+        height: 890px;
+        /* border: 2px black solid; */
+    }
+    .div2{
+        
+        flex-wrap: wrap;
+        width:83.5%;
+        height: 890px;
+        border: 2px black solid;
+    }
+    #htmlimg{
+      
+        width: 100%;
+        height: 100%;
+    }
+    @media only screen and (max-width:600px){
+        .container{
+           
+            height: auto;
+            width: auto;
+        }
+        .one img{
+            padding: auto;
+        }
+        .contain{
+            
+            width:auto;
+            height: auto;
+        }
+         .two{
+           height: auto;
+            width: auto;
+        } 
+        .div0{
+           
+            width: auto;
+            height: auto;
+        }
+        .div1{
+            width: auto;
+            height: auto;
+        }
+        .two ul {
+            margin: 0px; 
+            height: auto;
+            width: auto;
+        }
+        .one{
+            padding: auto;
+            width: auto;
+            height: auto;
+        }
+        .div2 .htmlimg{
+           
+            width: auto;
+            height: auto;
+        }
+        .body{
+            width: auto;
+            height: auto;
+        }
+        .container .div1 {
+            width: auto;
+            height: auto;
+        }
+        .contain .div0 {
+            width: auto;
+            height: auto;
+        }
+        .two ul li{
+            padding-left: auto;
+        }
+        
+    }
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contain">
+     
+            <div class="one">
+        <img class="imgg"src="https://images.yourstory.com/cs/images/companies/105258679142755552588822938412209020921842n1-1656492402682.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" alt="sorry">
+            </diV>
+            <div class="two">
+            <ul>
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="htmlpage.html">HTML</a></li>
+                <li><a href="csspage.html">CSS</a></li>
+                <li><a href="bootstrappage.html">Bootsrap</a></li>
+                <li><a href="jspage.html">Javascript</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="mp.html">Mini Project</a></li>
+                <li><a href="sql.html">SQL</a></li>
+            </ul>
+        </div>
+
+        
+     
+    </div>
+
+   <div class="div0">
+    <div class="div1">
+        <p style="font-size: 25px; text-align: center; margin-right: 30px;"><strong>Day 1</strong></p>
+        <br>
+        <h3>Assigments</h3>
+        <ul>
+            <li><a href="htmlassign1.html">Assignment 1</a></li>
+            <li><a href="htmlassign2.html">Assignment 2</a></li>
+        </ul>
+        <br>
+        <h3>Practical</h3>
+        <ul>
+            <li><a href="htmlpractice1.html">Practical 1</a></li>
+            <li><a href="htmlpractice2.html">Practical 2</a></li>
+        </ul>
+
+
+    </div>
+
+    <div class="div2">
+        <img id="htmlimg" src="https://techbeacon.com/sites/default/files/styles/social/public/html5-mobile-app-native-hybrid-pros-cons.jpg?itok=R3pMKIzh" >
+
+    </div>
+
+
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+
+ .clear {
+    clear:both;
+ }
+ header{
+    background-color: bisque;
+ }
+ header .logo{
+    float: left;
+    margin: 10px;
+  
+ }
+ header img{
+    padding: 2px;
+    height:auto;
+    width: auto;
+ }
+ header nav{
+    float: right;
+ }
+ header nav ul{
+    margin: 0px;
+    padding: 0px;
+ }
+ header nav ul li{
+    display: inline-block;
+}
+header nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 36px;
+    color: black;
+}
+

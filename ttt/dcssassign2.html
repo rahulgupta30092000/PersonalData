@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+.container{
+
+    width: 100%;
+    height: 994px;
+    border: 1px solid black;
+}
+.contain{
+    background-color: gray;
+    display: flex;
+    float: left;
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+}
+.one{
+    padding-left: 100px;
+    height: 100px;
+    width: 100px;
+    
+}
+.one img {
+    padding-left: 50px;
+    height: 100px;
+    width: 100px;
+
+}
+.two ul li{
+    
+    padding-top: 20px;
+    padding-left: 100px;
+    float: left;
+    list-style: none;
+    
+}
+.two ul li a{
+    color: white;
+    text-decoration: none;
+    
+}
+.two ul li a:hover{
+    padding: 8px;
+    background-color: black;
+    border-radius: 10px;
+    
+}
+
+    .div0{
+        display: flex;
+        width: 100%;
+        height: 1000px;
+    }
+    .div1{
+        padding-left: 20px;
+        width: 300px;
+        height: 890px;
+        border: 1px black solid;
+    }
+    .div2{
+        overflow: auto;
+        
+        width: 100%;
+        height: 890px;
+        border: 1px black solid;
+    }
+    #cssimg{
+        width: 100%;
+        height: 890px;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contain">
+     
+            <div class="one">
+        <img src="https://images.yourstory.com/cs/images/companies/105258679142755552588822938412209020921842n1-1656492402682.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" alt="sorry">
+            </diV>
+            <div class="two">
+            <ul>
+                <li style="margin-left: 200px;"><a href="index.html">Home</a></li>
+                <li><a href="htmlpage.html">HTML</a></li>
+                <li><a href="csspage.html">CSS</a></li>
+                <li><a href="bootstrappage.html">Bootsrap</a></li>
+                <li><a href="jspage.html">Javascript</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="mp.html">Mini Project</a></li>
+                <li><a href="sql.html">SQL</a></li>
+            </ul>
+        </div>
+
+        
+     
+    </div>
+
+   <div class="div0">
+    <div class="div1">
+        <p style="font-size: 25px; text-align: center; margin-right: 30px;"><strong>Day 2</strong></p>
+        <br>
+        <h2>Module 1</h2>
+       
+        <h3>Assignments</h3>
+        <ul>
+            <li><a href="csspassign1.html">Assignment 1</a></li>
+            <li><a href="cssassign2.html">Assignment 2</a></li>
+            <li><a href="cssassign3.html">Assignment 3</a></li>
+        </ul>
+        <br>
+        <h3>Practical</h3>
+        <ul>
+            <li><a href="csspractice1.html">Practical 1</a></li>
+            <li><a href="csspractice2.html">Practical 2</a></li>
+            <li><a href="csspractice3.html">Practical 3</a></li>
+            <li><a href="csspractice4.html">Practical 4</a></li>
+        </ul>
+        <br>
+        <br>
+        <h2>Module 2</h2>
+        <h3>Assignments</h3>
+        <ul>
+            <li><a href="dcssassign1.html">Assignment 1</a></li>
+            <li><a href="dcssassign2.html">Assignment 2</a></li>
+        </ul>
+        <br>
+        <h3>Practical</h3>
+        <ul>
+            <li><a href="dcsspractice1.html">Practical 1</a></li>
+            <li><a href="dcsspractice2.html">Practical 2</a></li>
+            <li><a href="dcsspractice3.html">Practical 3</a></li>
+            <li><a href="dcsspractice4.html">Practical 4</a></li>
+            <li><a href="dcsspractice5.html">Practical 5</a></li>
+        </ul>
+
+
+    </div>
+
+    <div class="div2">
+      
+
+  
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        
+            <style>
+                /* *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    
+                } */
+        .container23{
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 20px 0px 20px;
+        }
+        .container23 .heading{
+        width: 50%;
+        padding-bottom: 50px;
+        }
+        .container23 .heading h1 span{
+            font-weight: 100;
+        }
+        .container23 .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        }
+        .container23 .box .dream img{
+            width: 90%;
+            padding-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+        @media only screen and (max-width :769px){
+            .container23 .box{
+                flex-direction: column;
+            }
+            .container23 .box .dream{
+                width: 100%;
+            }
+        }
+            @media only screen and (max-width :645px){
+                .container232 .heading{
+                    width: 100%;
+                }
+                .container .heading h1{
+                    font-size: 2em;
+                    color:blue;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="container23">
+                <div class="heading">
+        
+                    <h1 style="margin-left: 200px;"> Responsive Photo  <span>Gallery</span></h1>
+                   
+                </div>
+        
+        
+                <div class="box">
+                    <div class="dream"><img src="gallery/img2.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img2.jpg" alt="sorry">
+                        <img src="/gallery/img3.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img2.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                    </div>
+                    <div class="dream"><img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img3.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img2.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img2.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                    </div>
+                    <div class="dream"><img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img2.jpg" alt="sorry">
+                        <img src="/gallery/img3.jpg" alt="sorry">
+                        <img src="/gallery/img2.jpg" alt="sorry">
+                        <img src="/gallery/img1.jpg" alt="sorry">
+                        <img src="/gallery/img3.jpg" alt="sorry">
+                    </div>
+                </div>
+               
+            </div>
+        </body>
+        </html>
+
+
+</div>
+</div>
+
+</body>
+</html>
