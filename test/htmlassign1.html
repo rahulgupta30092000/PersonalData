@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+.container{
+
+    width: 1350px;
+    height: 1000px;
+    border: 5px solid black;
+}
+.contain{
+    background-color: gray;
+    display: flex;
+    float: left;
+    border: 4px solid black;
+    width: 100%;
+    height: 100px;
+}
+.one{
+    padding-left: 100px;
+    height: 100px;
+    width: 100px;
+    
+}
+.one img {
+    padding-left: 50px;
+    height: 100px;
+    width: 100px;
+
+}
+.two ul li{
+    
+    padding-top: 20px;
+    padding-left: 50px;
+    float: left;
+    list-style: none;
+    
+}
+.two ul li a{
+    color: white;
+    text-decoration: none;
+}
+.two ul li a:hover{
+    padding: 8px;
+    background-color: black;
+}
+
+    .div0{
+        display: flex;
+        width: 1350px;
+        height: 1000px;
+    }
+    .div1{
+padding-left: 20px;
+        width: 300px;
+        height: 890px;
+        border: 2px black solid;
+    }
+    .div2{
+        
+        width: 1100px;
+        height: 890px;
+        border: 2px black solid;
+    }
+    #htmlimg{
+        width: 1100px;
+        height: 890px;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contain">
+     
+            <div class="one">
+        <img src="https://images.yourstory.com/cs/images/companies/105258679142755552588822938412209020921842n1-1656492402682.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" alt="sorry">
+            </diV>
+            <div class="two">
+            <ul>
+                <li style="margin-left: 200px;"><a href="index.html">Home</a></li>
+                <li><a href="htmlpage.html">HTML</a></li>
+                <li><a href="csspage.html">CSS</a></li>
+                <li><a href="bootstrappage.html">Bootsrap</a></li>
+                <li><a href="jspage.html">Javascript</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="mp.html">Mini Project</a></li>
+                <li><a href="sql.html">SQL</a></li>
+            </ul>
+        </div>
+
+        
+     
+    </div>
+
+   <div class="div0">
+    <div class="div1">
+        <p style="font-size: 25px; text-align: center; margin-right: 30px;"><strong>Day 1</strong></p>
+        <br>
+        <h3>Assigments</h3>
+        <ul>
+            <li><a href="htmlassign1.html">Assignment 1</a></li>
+            <li><a href="">Assignment 2</a></li>
+        </ul>
+        <br>
+        <h3>Practical</h3>
+        <ul>
+            <li><a href="">Practical 1</a></li>
+            <li><a href="">Practical 2</a></li>
+        </ul>
+
+
+    </div>
+
+    <div class="div2">
+       
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <header style="text-align: center;">
+        <h1>Employee Detail Form</h1>
+    </header>
+    <br>
+    <style>
+        .firstDiv {
+  margin: auto;
+  width: 30%;
+  border: 3px solid black;
+  padding: 10px;
+}
+.secondDiv {
+  margin: auto;
+  width: 30%;
+ align-items: center;
+  padding: 10px;
+}
+    </style>
+
+</head>
+<body>
+    <form>
+        <diV class="firstDiv">
+        <label for="employeeName">Employee Name</label>
+        <input type="text"  placeholder="Enter Name" value ="name" required><br><br>
+
+
+        <label for="employeeAge">Employee Age</label>
+        <input type="number"  placeholder="Enter Age" value ="Age" required><br><br>
+
+
+        <label for="employeeGender">Employee Gender</label><br>
+        <input type="radio"  name="gender" value="Male" checked>Male
+        <input type="radio" value="Female" name="gender">Female
+        <input type="radio" value="Other" name="gender">Other<br>
+
+        <label for="employeeDesignation">Employee Designation</label>
+        <select>
+            <option>Manager</option>
+            <option>Team Lead</option>
+            <option>HR</option>
+            <option>Intern</option>
+            <option>Developer</option> 
+            <option>Tester</option>
+        </select><br><br>
+
+
+        <label for="employeeSalary">Employee Salary</label>
+        <input type="number" placeholder="Enter Salary" value ="salary" required><br><br>
+
+
+        <label for="employeeLocation">Employee Location</label>
+     <select>
+        <option>Ahemdabad</option>
+        <option>Pune</option>
+        <option>Banglore</option>
+        <option>Bhopal</option>
+        <option>Indore</option>
+        <option>Ujjain</option>
+        <option>Mumbai</option>
+     </select><br><br>
+
+
+
+        <label for="employeeEmail">Employee Email</label>
+        <input type="email"  placeholder="Enter Email" value ="email"required><br><br>
+
+
+        <label for="employeeDOJ">Employee DOJ</label>
+        <input type="date" required ><br><br>
+
+
+        <label for="employeeContactNumber">Employee contact number</label>
+        <input type="tel"  placeholder="Enter contact" value ="contact number" required ><br><br>
+       
+ 
+    </diV>
+    <br>
+    
+    <div class="secondDiv" style="text-align: center;">
+    <button type="submit">Submit</button>
+ <button type="reset">Reset</button>
+</div >
+    </form>
+</body>
+</html>
+    </div>
+
+
+
+</div>
+</div>
+
+</body>
+</html>
