@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container{
+            display: flex;
+             flex-wrap: wrap; 
+            width: 100%;
+            height: 99vh;
+            border: 2px solid black;
+            
+        }
+        .sidebar{
+            background-color: lightskyblue;
+            color: white;
+            height: 84vh;
+            width: 210px;
+            /* float: left; */
+             border: 1px solid black;  
+        }
+        .details{
+            text-align: center;
+            width: 80%;
+            height: 10%;
+             /* border: 1px solid black; */
+            padding: 10%;
+            font-size: 20px;
+            margin-top: 18%;           
+        }
+
+        .forinfo{
+            display: flex;
+            margin-left: 50px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            /* float:right; */
+             border: 1px solid black;  
+            height: 80vh;
+            width:500px ;
+            background-color: antiquewhite;
+            box-shadow: 10px 10px 5px lavenderblush ;
+            color:black;
+        }
+
+        header{
+            background-color: lightskyblue;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+             border: 1px solid black; 
+             /* position: fixed;  */
+            height: 15%;
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+         a:hover{
+            background-color: darkblue;
+            border-radius: 5px;
+            font-size: 22px;
+            
+            
+            
+        }
+        
+        header img{
+            height:130px;
+            width:100px;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        body{
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        h1{
+           
+            margin-top: 4%;
+            margin-left: 28%;
+            font-size: 40px;
+        }
+
+        #carrer{
+            margin-top: 55%;
+            flex-wrap: wrap;
+            text-align: center;
+            font-size: 20px;
+
+            
+        }
+        #PersonalData h1{
+            /* font-size: 29px; */
+            margin-top: 100px;
+            margin-left: 150px;
+            margin-bottom: 50px;
+        }
+
+        #PersonalData p{
+            margin-left: 150px; 
+            flex-wrap: wrap;
+            text-align: center;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #Education h3{
+            text-align: center;
+            margin-top: 110px;
+        }
+        #Education table{
+            text-align: center;
+            height: 200px;
+            width: 350px;
+            border-collapse: collapse;
+            margin-top: 100px;
+            margin-left: 19%;
+        }
+        #ex{
+            text-align: center;
+            margin-top: 110px;
+            font-size: 20px;
+        }
+        .value {
+        
+        display:none;
+        }
+
+         .value:target{
+            
+            display:block;
+
+        } 
+
+
+        
+            @media only screen and (max-width:600px){
+            .container{
+                height: auto;
+                width: auto;
+            }
+            header{
+               
+                height: auto;
+                width: 100%;
+
+            }
+           header h1{
+            font-size: 15px;
+            }
+            .sidebar{
+                width: 100%;
+            }
+            .forinfo{
+                width: 100%;
+                 margin:auto;
+            }
+           #Education table {
+            height: auto;
+            width: auto;
+            margin: auto;
+            flex-wrap: wrap;
+            padding: auto;
+           }
+           #PersonalData p {
+            font-size: 15px;
+            margin: 0px;
+
+           }
+           #PersonalData h1 {
+            font-size: 15px;
+            margin: 0px;
+
+           }
+        }
+        
+
+
+           
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div class="container">
+        <header>
+            <img src="http://blog.fotor.com/wp-content/uploads/2017/06/cropped-731x1024.jpg" alt="sorry" >
+            <h1>Resume</h1>
+        </header>
+        <aside>
+            <div class="sidebar" >
+                <div class="details"><a href="#carrer"> Carrer Objective</a></div>
+                <div class="details"><a href="#PersonalData">Personal Information</a></div>
+                
+                <div class="details"><a href="#Education">Education</a></div>
+                <div class="details"><a href="#ex">Experience </a></div>
+            </div>
+            
+        </aside>
+        <div class="forinfo">
+            
+                <div  class="value" id="carrer">
+                <p>"A challenging position in an innovative and forward-thinking company that will allow me to utilize my skills and experience in a new and exciting way." </p>
+                </div>
+
+                <div  class="value" id="PersonalData">
+                  <h1>David Jhonson</h1>
+                    <p>Address := Flat-5 house-8  London</p>
+                    <p>Contact := +09-666-097-097</p>
+                    <p>Email := David@gmail.com</p>
+
+
+                    </div>
+
+                    <div  class="value" id="Education">
+                       
+                            <h3 >Educational Qualification </h3>
+                            <table border="2px" >
+                                <caption></caption>
+                                <tr>
+                                    <th><strong>Semister/School</strong></th>
+                                    <th><strong>Grade</b></strong>
+                                    <th><strong>cgpa</strong></th>
+                                </tr>
+                                <tr>
+                                    <td>10th</td>
+                                    <td>B</td>
+                                    <td>80%</td>
+                                </tr>
+                                <tr>
+                                    <td>11th</td>
+                                    <td>A</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr>
+                                    <td>Sem 7</td>
+                                    <td>B</td>
+                                    <td>80%</td>
+                                </tr>
+                            
+                    
+                            
+                            
+                            
+                            </table>
+                        </div>
+
+                        <div  class="value" id="ex">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quas sint, illum perferendis laborum possimus voluptatibus 
+                                nostrum animi. Reprehenderit illum doloremque nihil eum
+                                 repellat similique rem ad aspernatur id porro! </p>
+                            </div>
+
+
+
+    </div>
+
+
+
+    
+
+
+    
+    </div>
+
+    
+</body>
+</html>
