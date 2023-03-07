@@ -5,162 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        
-        .container{
-            display: inline-block;
-            width: 100%;
-            height: 1500px;
-            background-color: bisque;
-        }
-        .card{
-            display: inline-block;
-            border: 2px solid black;
-            width: 350px;
-            height: 250px;
-            border-radius: 8px;
-            margin: 20px;
-            background-color:white;
-            
-        }
-        
-        .inner{
-            float: right;
-        }
-        .logo
-        {
-            margin: 10px;
-            height:95px;
-             width:70px;
-             border: 1px solid black;
-             border-radius: 180%;
-        }
-       .logo2{
-        margin: 10px;
-            height:55px;
-             width:55px;
-             border: 1px solid black;
-             border-radius: 100px;
-             float:right;
-             margin-right: 10px;
-       }
-       .inner{
-        margin-right: 10px;
-       }
-       .super{
-        float: left;
-        margin-left: 10px;
-       }
-       
-       .forlink{
-margin-left: 120px;
-       }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="inner">
-                <p><strong>Student Id</strong> : 1</p>
-                <p><strong>Name</strong> : kabir sharma</p>
-                <p><strong>D.O.B</strong> : 25-5-2000</p>
-                
-            </div>
-            <div >
-                <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="sorry" class ="logo ">
-            </div>
-
-            <div >
-                <img src="https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg" alt="sorry" class ="logo2 ">
-            </div>
-            <div class ="super">
-                <p><strong>College Name</strong> : SVVV</p>
-                <p><strong>City</strong> : Indore</p>
-                <div class="forlink">
-                    <a href="./ex1.html" class="link">Show more</a>
-                </div>
-            </div>    
-        </div>
-   
-
-    <div class="card">
-        <div class="inner">
-            <p><strong>Student Id</strong> : 2</p>
-            <p><strong>Name</strong> : Manish sharma</p>
-            <p><strong> D.O.B</strong> : 20-5-2000</p>
-            
-        </div>
-        <div >
-            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="sorry" class ="logo ">
-        </div>
-
-        <div >
-            <img src="https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg" alt="sorry" class ="logo2 ">
-        </div>
-        <div class ="super">
-            <p><strong>College Name</strong> : SVVV</p>
-            <p><strong>City</strong> : Indore</p>
-            <div class="forlink">
-                <a href="./ex1.html" class="link">Show more</a>
-            </div>
-        </div>    
-    </div>
 
 
-<div class="card">
-    <div class="inner">
-        <p><strong>Student Id</strong> : 3</p>
-        <p><strong>Name</strong> : Vinit verma</p>
-        <p><strong>D.O.B</strong> : 25-6-2000</p>
-        
-    </div>
-    <div >
-        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="sorry" class ="logo ">
-    </div>
+    <table class="table" id="tables">
+        <thead>
+          <tr>
+            <th scope="col"><strong>#ID</strong></th>
+            <th scope="col"><strong>Name</strong></th>
+            <th scope="col"><strong>Email</strong></th>
+            <th scope="col"><strong>Gender</strong></th>
+            <th scope="col"><strong>Status</strong></th>
+            <th scope="col"><strong>Actions</strong></th>
+          </tr>
+        </thead>
+        <tbody id="ttbo">
+          
+         
+          
+        </tbody>
+      </table>
+      <button type="button" onclick="get()"> GET</button>
 
-    <div >
-        <img src="https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg" alt="sorry" class ="logo2 ">
-    </div>
-    <div class ="super">
-        <p><strong>College Name</strong> : SVVV</p>
-        <p><string>City</string> : Indore</p>
-        <div class="forlink">
-            <a href="./ex1.html" class="link">Show more</a>
-        </div>
-    </div>    
-</div>
+    <script>
+    function get(){
 
+    
+        var myHeaders = new Headers();
+myHeaders.append("Authorization", "Bearer f1a656da1a431b25b60e43e57e340aef8b4159d912aee8bee8338112c9ba838c");
 
-<div class="card">
-    <div class="inner">
-        <p><strong>Student Id</strong> : 4</p>
-        <p><strong>Name</strong> : Hrashit parmar</p>
-        <p><strong>D.O.B</strong> : 17-5-2000</p>
-        
-    </div>
-    <div >
-        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="sorry" class ="logo ">
-    </div>
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
 
-    <div >
-        <img src="https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg" alt="sorry" class ="logo2 ">
-    </div>
-    <div class ="super">
-        <p><strong>College Name</strong> : SVVV</p>
-        <p><strong>City</strong> : Indore</p>
-        <div class="forlink">
-            <a href="./ex1.html" class="link">Show more</a>
-        </div>
-    </div>    
-</div>
+fetch("https://gorest.co.in/public/v2/users", requestOptions)
+  .then(response => response.text())
+  .then(async result => await call(result))
+  .catch(error => console.log('error', error));
+    
+  function call(data){
+    var arr = [];
+            var obj = JSON.parse(data);
+           
+            for (var i = 0; i < obj.length; i++) {
+
+                arr += '<tr> <td>' + obj[i].id + '</td>' + '<td>' + obj[i].name + '</td>' + '<td>' + obj[i].email + '</td>' + '<td>' + obj[i].gender + '</td>' + '<td>' + obj[i].status +'<td><button value="" onclick="patch('+obj[i].id+')">'  +"Update"+ '</button></td>'+'<td><button value="" onclick="del('+obj[i].id+')">'  +"Delete"+ '</button></td> </tr>'
 
 
+                console.log(obj[i].gender)
+            }
 
-</div>
-</div>
-        
-        
-    </div>
+            document.getElementById("ttbo").innerHTML = arr;
+
+  }
+}
+
+    </script>
+
     
 </body>
 </html>
