@@ -1,0 +1,49 @@
+what is docker?
+
+Docker is an open-source centralized platform designed to create, deploy, and run applications. Docker uses container on the host's operating system to run applications. It allows applications to use the same Linux kernel as a system on the host computer, rather than creating a whole virtual operating system. Containers ensure that our application works in any environment like development, test, or production.
+
+Docker includes components such as Docker client, Docker server, Docker machine, Docker hub, Docker composes, etc.
+
+
+
+what is container?
+Docker containers are the lightweight alternatives of the virtual machine. It allows developers to package up the application with all its libraries and dependencies, and ship it as a single package. The advantage of using a docker container is that you don't need to allocate any RAM and disk space for the applications. It automatically generates storage and space according to the application requirement.
+
+
+what is docker images?
+Docker Image is an executable package of software that includes everything needed to run an application. This image informs how a container should instantiate, determining which software components will run and how. Docker Container is a virtual environment that bundles application code with all the dependencies required to run the application. The application runs quickly and reliably from one computing environment to another.
+
+
+
+
+what is nignx?
+NGINX is pronounced as "engine-ex".
+It is an open-source, fast, lightweight and high-performance web server that can be used to serve static files.
+NGINX has considered as the popular web server behind the Apache web server and Microsoft's IIS.
+In its initial release, NGINX functioned for HTTP web serving. Today, however, it also serves as a reverse proxy server for HTTP, HTTPS, SMTP, IMAP, POP3 protocols, on the other hand, it is also used for HTTP load balancer, HTTP cache, and email proxy for IMAP, POP3, and SMTP.
+NGINX improves content and application delivery, improves security, and facilitates scalability and availability for the busiest websites on the internet.
+In short, we can say that Nginx is just a kind of software that is used in web servers to serve concurrent requests.
+Previously we used to install Apache in web servers to handle these functions, but as the world, in growing and demanding more things at one time, the term concurrency comes into the world and nginx launched for the same thing.
+
+
+
+
+Ten commands are ?
+The 10 commands are-
+
+1)docker build	= Build an image from a Dockerfile
+2)docker create	=Create a new container
+3)docker history	=Show the history of an image
+4)docker logs	Fetch the logs of a container
+5)docker network=	Manage networks
+6)docker ps=	List containers
+7)docker pull	= Download an image from a registry
+8)docker push	=Upload an image to a registry
+9)docker rename=	Rename a container
+10)docker rm	=Remove one or more containers
+11)docker run	Create and run a new container from an image
+
+
+
+
+
